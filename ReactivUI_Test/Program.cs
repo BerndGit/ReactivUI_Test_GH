@@ -40,41 +40,41 @@ namespace ReactivUI_Test
 
         public ViewModel()
         {
-      /*      this.WhenAnyValue(x => x.Foo.Bar.Baz)
-                 .Subscribe(x => Console.WriteLine("Hallo " + x?.ToString())); 
+            /*      this.WhenAnyValue(x => x.Foo.Bar.Baz)
+                       .Subscribe(x => Console.WriteLine("Hallo " + x?.ToString())); 
 
-            Console.WriteLine("Example 1");
-            this.Foo.Bar.Baz = null;
-            Console.WriteLine("Example 2a");
-            this.Foo.Bar = new BarClass();
-            Console.WriteLine("Example 2b");
-            this.Foo.Bar = new BarClass();
-            Console.WriteLine("Example 3");
-            this.Foo.Bar = new BarClass() { Baz = "Something" };
+                  Console.WriteLine("Example 1");
+                  this.Foo.Bar.Baz = null;
+                  Console.WriteLine("Example 2a");
+                  this.Foo.Bar = new BarClass();
+                  Console.WriteLine("Example 2b");
+                  this.Foo.Bar = new BarClass();
+                  Console.WriteLine("Example 3");
+                  this.Foo.Bar = new BarClass() { Baz = "Something" };
 
-            Console.WriteLine("Example 4");
-            this.Foo = new FooClass() ; */
+                  Console.WriteLine("Example 4");
+                  this.Foo = new FooClass() ; 
 
-            
-            SourceList<String> sl = new SourceList<String>();
-            sl.Add("One");
-            sl.Add("Two");
-            sl.Add("Two");
-            sl.Add("Three");
 
-            
-            sl.Connect()
-                .Transform(x => x)
-                .Sort(SortExpressionComparer<String>.Ascending(t => t))
-                .DistinctValues(x => x)
-                .Bind(out ReadOnlyObservableCollection<String> sorted)
-                .Subscribe();
+                  SourceList<String> sl = new SourceList<String>();
+                  sl.Add("One");
+                  sl.Add("Two");
+                  sl.Add("Two");
+                  sl.Add("Three");
 
-            Console.WriteLine("=== Raw List ===");
-            PrintList<String>(sl.Items);
 
-            Console.WriteLine("=== Sorted ===");
-            PrintList<String>(sorted); 
+                  sl.Connect()
+                      .Transform(x => x)
+                      .Sort(SortExpressionComparer<String>.Ascending(t => t))
+                      .DistinctValues(x => x)
+                      .Bind(out ReadOnlyObservableCollection<String> sorted)
+                      .Subscribe();
+
+                  Console.WriteLine("=== Raw List ===");
+                  PrintList<String>(sl.Items);
+
+                  Console.WriteLine("=== Sorted ===");
+                  PrintList<String>(sorted);   */
 
             Console.WriteLine("===  ===");
 
