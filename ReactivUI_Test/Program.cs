@@ -40,7 +40,7 @@ namespace ReactivUI_Test
 
         public ViewModel()
         {
-            this.WhenAnyValue(x => x.Foo.Bar.Baz)
+      /*      this.WhenAnyValue(x => x.Foo.Bar.Baz)
                  .Subscribe(x => Console.WriteLine("Hallo " + x?.ToString())); 
 
             Console.WriteLine("Example 1");
@@ -53,7 +53,7 @@ namespace ReactivUI_Test
             this.Foo.Bar = new BarClass() { Baz = "Something" };
 
             Console.WriteLine("Example 4");
-            this.Foo = new FooClass() ;
+            this.Foo = new FooClass() ; */
 
             
             SourceList<String> sl = new SourceList<String>();
