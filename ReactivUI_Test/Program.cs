@@ -38,9 +38,11 @@ namespace ReactivUI_Test
             }
         }
 
+        SourceList<FooClass> sl2 = new SourceList<FooClass>();
+
         public ViewModel()
         {
-            /*      this.WhenAnyValue(x => x.Foo.Bar.Baz)
+                this.WhenAnyValue(x => x.Foo.Bar.Baz)
                        .Subscribe(x => Console.WriteLine("Hallo " + x?.ToString())); 
 
                   Console.WriteLine("Example 1");
@@ -74,11 +76,11 @@ namespace ReactivUI_Test
                   PrintList<String>(sl.Items);
 
                   Console.WriteLine("=== Sorted ===");
-                  PrintList<String>(sorted);   */
+                  PrintList<String>(sorted);   
 
             Console.WriteLine("===  ===");
 
-            SourceList<FooClass> sl2 = new SourceList<FooClass>();
+            
 
             FooClass fo1 = new FooClass() { Bar = new BarClass("Hello ") };
             FooClass fo2 = new FooClass() { Bar = new BarClass("World ") };
@@ -93,6 +95,7 @@ namespace ReactivUI_Test
 
 
             sl2.Connect()
+                .AutoRefresh(x => x.Bar)
                 .Transform(x => x.Bar.Baz)
          //       .Sort(SortExpressionComparer<String>.Ascending(t => t))
          //       .DistinctValues(x => x)
