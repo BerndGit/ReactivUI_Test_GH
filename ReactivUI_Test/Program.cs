@@ -95,7 +95,7 @@ namespace ReactivUI_Test
 
 
             sl2.Connect()
-                .AutoRefresh(x => x.Bar)
+                .AutoRefresh(x => x.Bar.Baz)
                 .Transform(x => x.Bar.Baz, true)
          //       .Sort(SortExpressionComparer<String>.Ascending(t => t))
          //       .DistinctValues(x => x)
